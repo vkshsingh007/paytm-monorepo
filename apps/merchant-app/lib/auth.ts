@@ -4,7 +4,9 @@ import db from "@repo/db/client";
 export const authOptions = {
     providers: [
         GoogleProvider({
+            // eslint-disable-next-line turbo/no-undeclared-env-vars
             clientId: process.env.GOOGLE_CLIENT_ID || "",
+            // eslint-disable-next-line turbo/no-undeclared-env-vars
             clientSecret: process.env.GOOGLE_CLIENT_SECRET || ""
         })
     ],
@@ -44,5 +46,6 @@ export const authOptions = {
         return true;
       }
     },
+    // eslint-disable-next-line turbo/no-undeclared-env-vars
     secret: process.env.NEXTAUTH_SECRET || "secret"
   }
